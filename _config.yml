@@ -1,9 +1,9 @@
 # Site settings
 title: Giovanni Sbattella
-description: Italian macroeconomics.
+description: Italian macroeconomics
 cover: assets/images/macroeconomics_image.jpg
 #logo: assets/images/logo.png
-favicon: assets/images/favicon.png
+#favicon: assets/images/favicon.png
 baseurl: "/" # the subpath of your site, e.g. /blog/ or / for root
 url: "https://giovannisbattella.github.io/" # the base hostname & protocol for your site
 
@@ -25,7 +25,7 @@ github:  "https://github.com/giovannisbattella/"
 #Additional Pages
 about: about
 contact: contact
-privacy-policy: privacy-policy
+#privacy-policy: privacy-policy
 
 
 permalink: /:title
