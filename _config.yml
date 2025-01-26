@@ -5,7 +5,7 @@ cover: assets/images/radhakrishna.jpg
 logo: assets/images/logo.png
 favicon: assets/images/favicon.png
 baseurl: "/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://giovannisbattella.github.io" # the base hostname & protocol for your site
+url: "https://giovannisbattella.github.io/" # the base hostname & protocol for your site
 
 pagination:
 
@@ -20,7 +20,7 @@ pagination:
 # Social
 #facebook: facebook
 #twitter: twitter
-github:  "https://github.com/giovannisbattella"
+github:  "https://github.com/giovannisbattella/"
 
 #Additional Pages
 about: about
