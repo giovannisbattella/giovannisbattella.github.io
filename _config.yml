@@ -1,11 +1,11 @@
 # Site settings
-title: Hanuman
-description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+title: Giovanni Sbattella
+description: Italian macroeconomics.
 cover: assets/images/radhakrishna.jpg
 logo: assets/images/logo.png
 favicon: assets/images/favicon.png
-baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://samanyougarg.com" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog/ or / for root
+url: "https://giovannisbattella.github.io" # the base hostname & protocol for your site
 
 pagination:
 
@@ -18,9 +18,9 @@ pagination:
   per_page: 5
 
 # Social
-facebook: facebook
-twitter: twitter
-github:  github
+#facebook: facebook
+#twitter: twitter
+github:  "https://github.com/giovannisbattella"
 
 #Additional Pages
 about: about
