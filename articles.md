@@ -9,11 +9,8 @@ permalink: /articles/
 <h3>Unordered List</h3>
 
 <ul>
-<li>List Item 1</li>
-<li>List Item 2
-<ul><li>Nested list item A</li>
-<li>Nested list item B</li></ul></li>
-<li>List Item 3</li>
+<li>Article 1</li>
+<li>Article 2</li>
 </ul>
 
 <hr />
