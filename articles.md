@@ -6,11 +6,10 @@ permalink: /articles/
 
 <amp-img width="600" height="300" layout="responsive" src="http://lorempixel.com/600/300/sports"></amp-img>
 
-<h3>Unordered List</h3>
+<h3>Featured Article</h3>
 
-<ul>
-<li>Article 1</li>
-<li>Article 2</li>
-</ul>
-
-<hr />
+{% assign featured_post = site.posts | where: "featured", true | first %}
+{% if featured_post %}
+  <h2><a href="{{ featured_post.url | relative_url }}">{{ featured_post.title }}</a></h2>
+  <p>{{ featured_post.excerpt }}</p>
+{% endif %}
