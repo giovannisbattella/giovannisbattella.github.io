@@ -50,8 +50,3 @@ defaults:
       type: "pages"
     values:
       layout: single
-
-# Navigation
-header_pages:
-  - /_pages/articles.md
-  - /_pages/about.md
