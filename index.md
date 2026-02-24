@@ -4,7 +4,7 @@ title: ""
 permalink: /
 author_profile: true
 entries_layout: grid
-paginate: 6
+paginate: 3
 ---
 
 This is the homepage.  
