@@ -6,13 +6,20 @@ plugins:
   - jekyll-include-cache
 
   author:
-  name   : "Giovanni Sbattella"
-  avatar : "/images/giovanni.jpg"
-  bio    : "Complex macroeconomics"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/giovannisbattella"
+    name             : "Giovanni Sbattella"
+    avatar : "/images/giovanni.jpg"
+    bio    : "Complex macroeconomics"
+    location         : "Barcelona, ES"
+    links:
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/giovannisbattella"
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        url: "mailto:giovanni.sbattella@bse.eu"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin"
+        url: "https://www.linkedin.com/in/giovanni-sbattella-877b22245/"
 
 # Enable posts
 collections:
