@@ -4,3 +4,12 @@ remote_theme: mmistakes/minimal-mistakes@4.24.0
 
 plugins:
   - jekyll-include-cache
+
+  author:
+  name   : "My Name"
+  #avatar : "/assets/images/avatar.jpg"
+  bio    : "Short bio here."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
