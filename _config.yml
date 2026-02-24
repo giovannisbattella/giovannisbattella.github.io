@@ -1,5 +1,6 @@
 title: Giovanni Sbattella
 description: My website
+subtitle: Complex Macroeconomics 
 url: "https://giovannisbattella.github.io"
 baseurl: ""
 
@@ -11,7 +12,7 @@ plugins:
 author:
   name   : "Giovanni Sbattella"
   avatar : "/images/giovanni.jpg"
-  bio    : "Complex macroeconomics"
+  #bio    : "Complex macroeconomics"
   location: "Barcelona, ES"
   links:
     - label: "GitHub"
