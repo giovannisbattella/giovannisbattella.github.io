@@ -43,6 +43,9 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/giovanni-sbattella-877b22245/"
   since: "2024"
+
+include:
+  - _pages
   
 # Tell Jekyll to process _pages
 defaults:
