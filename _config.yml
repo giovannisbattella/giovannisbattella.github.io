@@ -49,6 +49,13 @@ collections:
     
 show_tag_cloud: true   # for sidebar tag cloud
 show_post_tags: true   # for showing tags below posts
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
   
 # Tell Jekyll to process _pages
 defaults:
