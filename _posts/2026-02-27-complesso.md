@@ -6,5 +6,6 @@ excerpt: "Short description of the article."
 header:
   overlay_image: /assets/images/france.jpg
   teaser: /assets/images/giovanni.jpg
+author_profile: false
 ---
 Molto complesso
