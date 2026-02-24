@@ -42,13 +42,6 @@ footer:
 
 include:
   - _pages
-  
-collections:
-  tags:
-    output: true
-    
-show_tag_cloud: true   # for sidebar tag cloud
-show_post_tags: true   # for showing tags below posts
 
 category_archive:
   type: liquid
