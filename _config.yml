@@ -7,7 +7,7 @@ plugins:
 
   author:
   name   : "Giovanni Sbattella"
-  avatar : "/assets/images/giovanni.jpg"
+  avatar : "/images/giovanni.jpg"
   bio    : "Complex macroeconomics"
   links:
     - label: "GitHub"
