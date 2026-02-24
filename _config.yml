@@ -10,6 +10,9 @@ plugins:
   - jekyll-include-cache
   - jekyll-paginate
   - jekyll-tagging
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
 
 author:
   name   : "Giovanni Sbattella"
