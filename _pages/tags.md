@@ -4,4 +4,4 @@ permalink: /tags/
 title: "Explore Topics"
 ---
 
-Browse by Topic.
+Browse by Topic
