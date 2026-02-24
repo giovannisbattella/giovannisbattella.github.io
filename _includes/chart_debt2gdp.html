@@ -1,0 +1,63 @@
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+<style>
+  form.vega-bindings {
+      display: none;      /* completely hides the form */
+      background-color: transparent; /* just in case */
+      padding: 0;          /* remove any padding */
+      margin: 0;           /* remove any margin */
+  }
+</style>
+
+<figure>
+
+  <h3 style="text-align: center; margin-bottom: 8px;">
+    Euro Area Public Debt-to-GDP Ratios (2024 Q4)
+  </h3>
+
+  <div id="vega_debt_hist" style="width: 100%; max-width: 800px;"></div>
+  
+  <figcaption style="text-align: center; font-style: italic; margin-top: 8px;">
+    France has one of the highest debt-to-GDP ratios in the Euro Area. Source: EUROSTAT
+  </figcaption>
+
+</figure>
+
+<script type="text/javascript">
+const spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Euro Area Debt-to-GDP for Last Quarter",
+  "data": {
+    "url": "https://raw.githubusercontent.com/giovannisbattella/giovannisbattella.github.io/main/data/teina230_page_linear_2_0_2024_Q4.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"OBS_VALUE": "number"}
+    }
+  },
+  "transform": [{"filter": "datum.OBS_VALUE != null"}],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "geo", "type": "nominal", "title": "Country", "sort": "-y"},
+    "y": {"field": "OBS_VALUE", "type": "quantitative", "title": "Debt / GDP (%)"},
+    "tooltip": [
+      {"field": "geo", "type": "nominal", "title": "Country"},
+      {"field": "OBS_VALUE", "type": "quantitative", "title": "Debt / GDP (%)"}
+    ],
+    "color": {
+      "condition": {
+        "test": "datum.geo === 'FR'",
+        "value": "#0b3d91"
+      },
+    "value": "#1f77b4"
+  }
+  },
+  "width": "container",
+  "height": 400
+};
+
+vegaEmbed("#vega_debt_hist", spec, { actions: false, bind: false })
+  .catch(console.error);
+  
+</script>
