@@ -13,3 +13,13 @@ plugins:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
+
+# Enable posts
+collections:
+  posts:
+    output: true
+
+# Navigation
+header_pages:
+  - articles.md
+  - about.md
