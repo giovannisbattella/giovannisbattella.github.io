@@ -1,11 +1,28 @@
 ---
 layout: single
-title: "Complesso"
+title: "What is happening in France?"
 date: 2026-02-20
-excerpt: "Short description of the article."
+excerpt: "A bond crisis in the pipeline"
 header:
   overlay_image: /images/france.png
-  teaser: /images/giovanni.jpg
+  teaser: /images/france.png
 author_profile: false
+tags: international
+author: Giovanni Sbattella
 ---
-Molto complesso
+
+France is once again at the center of political turbulence, with its economic future hanging in the balance. The collapse of Prime Minister François Bayrou’s government after losing a confidence vote in the National Assembly has deepened the sense of instability. The rejection of his €44 billion deficit-reduction package highlighted just how fractured the legislature has become. Bayrou, the fourth prime minister to fall under Emmanuel Macron in barely a year, was unable to bridge divides across a parliament that has resisted austerity measures from both the left and the far right.</p>
+
+The government’s fiscal plan had sought sweeping cuts, including measures as symbolic as eliminating public holidays and as consequential as freezing certain spending lines. These proposals were rejected across the spectrum, underlining the difficulty of consolidating public finances when political forces are so polarized. Macron’s position has been weakened since the 2024 snap elections produced a fragmented National Assembly, leaving him without a stable majority.</p>
+
+On the streets, discontent has been mounting. Demonstrations organized under the banner “Bloquons Tout” — “Let’s Block Everything” — have drawn support from powerful unions, signaling a broader resistance to austerity. Business leaders warn that political paralysis risks driving investment away from France, while polls suggest public confidence in both the government and parliament is deteriorating.</p>
+
+Economic pressures are making this turmoil more acute. France’s public debt stands at around 114 percent of GDP, one of the highest ratios in Europe, and the budget deficit is expected to remain above 5 percent of output this year. Credit rating agencies have grown increasingly cautious. S&P Global, while maintaining France at AA-, has placed the country on negative outlook, warning that without credible fiscal consolidation, a downgrade could follow. The implications are already visible in rising borrowing costs for French debt.</p>
+
+Growth remains fragile. Consumer spending has provided some support, but investment is slowing as uncertainty builds. The International Monetary Fund has urged France to adopt a credible, sustained strategy to reduce deficits, calling for more rationalized public spending and better targeting of welfare policies. Yet such reforms seem politically elusive in a climate of parliamentary gridlock and social unrest.</p>
+
+The appointment of Sébastien Lecornu as the new prime minister offers no easy reset. A close Macron ally, Lecornu inherits the same obstacles that brought down his predecessor: a fragmented legislature, voter disillusionment, and the delicate task of balancing austerity with political survival. Whether his government can push through a new fiscal package will be a defining test for France’s stability.</p>
+
+For investors and markets, the risks are clear. Failure to pass a credible budget could trigger a downgrade and drive up borrowing costs, limiting France’s already constrained fiscal flexibility. Prolonged impasse may undermine business confidence further, raising the specter of recession. On the other hand, a compromise package — one that relies more on taxation than sweeping spending cuts — might buy the government breathing room, even if protests continue.</p>
+
+France stands at a crossroads. The country’s fiscal metrics — high debt, persistent deficits, rising yields — are not new, but the political machinery designed to manage them appears more fragile than ever. The central question is whether Lecornu’s government can chart a course between austerity and unrest before financial markets and voters lose patience.</p>
