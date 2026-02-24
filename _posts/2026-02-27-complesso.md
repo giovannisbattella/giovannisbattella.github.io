@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: single
 title: "Complesso"
 date: 2026-02-20
 excerpt: "Short description of the article."
 header:
+  overlay_image: /assets/images/france.jpg
   teaser: /assets/images/giovanni.jpg
-cover: /assets/france/giovanni.jpg
 ---
 Molto complesso
