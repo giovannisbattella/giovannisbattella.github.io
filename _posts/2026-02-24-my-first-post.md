@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "My First Post"
 date: 2026-02-24
 categories: blog
