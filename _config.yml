@@ -43,6 +43,10 @@ footer:
 include:
   - _pages
   
+collections:
+  tags:
+    output: true
+  
 # Tell Jekyll to process _pages
 defaults:
   - scope:
