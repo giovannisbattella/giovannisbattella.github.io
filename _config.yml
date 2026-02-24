@@ -46,6 +46,9 @@ include:
 collections:
   tags:
     output: true
+    
+show_tag_cloud: true   # for sidebar tag cloud
+show_post_tags: true   # for showing tags below posts
   
 # Tell Jekyll to process _pages
 defaults:
