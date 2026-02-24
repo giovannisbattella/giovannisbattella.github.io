@@ -27,6 +27,7 @@ author:
       url: "https://github.com/giovannisbattella"
       
 footer:
+  show_rss: false
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
