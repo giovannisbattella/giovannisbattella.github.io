@@ -1,7 +1,6 @@
 ---
-layout: posts
+layout: archive
 title: "Articles"
 permalink: /articles/
-show_archive: false
 author_profile: true
 ---
