@@ -12,7 +12,7 @@ plugins:
 author:
   name   : "Giovanni Sbattella"
   avatar : "/images/giovanni.jpg"
-  #bio    : "Complex macroeconomics"
+  bio    : ""
   location: "Barcelona, ES"
   links:
     - label: "GitHub"
