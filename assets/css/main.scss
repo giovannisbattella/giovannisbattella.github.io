@@ -4,14 +4,8 @@
 
 @import "minimal-mistakes";
 
-/* AVATAR - fully opaque by default, slightly transparent on hover */
-.sidebar__author .author__avatar img {
-  opacity: 1 !important;      
-  filter: none !important;
-  transition: opacity 0.3s ease;  /* smooth fade */
-}
-
-.sidebar__author .author__avatar a:hover img {
-  opacity: 0.7 !important;    
-  filter: none !important;
-}
+/* SIDEBAR - fully opaque */
+@media (min-width: 64em) {
+  .sidebar {
+    opacity: 1;
+  }
