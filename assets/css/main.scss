@@ -3,3 +3,16 @@
 ---
 
 @import "minimal-mistakes";
+
+/* AVATAR - fully opaque by default, slightly transparent on hover */
+.author__avatar img,
+.author__avatar a img {
+  opacity: 1 !important;
+  filter: none !important;
+  transition: opacity 0.3s ease;  /* smooth fade */
+}
+
+.author__avatar a:hover img {
+  opacity: 0.7 !important;
+  filter: none !important;
+}
