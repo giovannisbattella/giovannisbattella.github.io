@@ -16,7 +16,7 @@ plugins:
 
 author:
   name   : "Giovanni Sbattella"
-  avatar : "/images/giovanni.jpg"
+  avatar : "/assets/images/giovanni.jpg"
   bio    : ""
   location: "Barcelona, ES"
   links:
