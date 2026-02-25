@@ -5,7 +5,6 @@
 @import "minimal-mistakes";
 
 /* SIDEBAR - fully opaque */
-@media (min-width: 64em) {
-  .sidebar {
-    opacity: 1;
-  }
+.sidebar {
+  opacity: 1;
+}
