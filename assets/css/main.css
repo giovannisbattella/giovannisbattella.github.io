@@ -6,5 +6,5 @@
 
 /* SIDEBAR - fully opaque */
 .sidebar {
-  opacity: 1;
+  opacity: 1 !important;
 }
