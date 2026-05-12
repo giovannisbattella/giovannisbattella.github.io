@@ -1,0 +1,16 @@
+{% include vega-chart.html 
+  chart_id="debt_histogram"
+  title="Euro Area Public Debt-to-GDP Ratios (2024 Q4)"
+  description="France has one of the highest debt-to-GDP ratios in the Euro Area. Source: EUROSTAT"
+  data_url="/assets/data/teina230_page_linear_2_0_2024_Q4.csv"
+  chart_type="bar"
+  x_field="geo"
+  y_field="OBS_VALUE"
+  x_title="Country"
+  y_title="Debt / GDP (%)"
+  highlight_field="geo"
+  highlight_value="FR"
+  highlight_color="#d62728"
+  default_color="#1f77b4"
+  height="400"
+%}
