@@ -1,0 +1,196 @@
+{% raw %}
+<!--
+  Reusable Vega-Lite Chart Include
+  
+  Parameters:
+  - chart_id: unique identifier for the chart container (required)
+  - title: chart title (required)
+  - description: figure caption (optional)
+  - data_url: URL to CSV file (required)
+  - chart_type: 'bar', 'line', 'scatter' (default: 'bar')
+  - x_field: field name for X axis (required)
+  - y_field: field name for Y axis (required)
+  - x_title: X axis label (optional)
+  - y_title: Y axis label (optional)
+  - highlight_field: field to highlight (optional)
+  - highlight_value: value to highlight (optional)
+  - highlight_color: color for highlighted item (default: '#0b3d91')
+  - default_color: default bar/point color (default: '#1f77b4')
+  - width: chart width (default: 'container')
+  - height: chart height in pixels (default: 400)
+  - sort_by: '-y' for descending, 'y' for ascending (default: '-y')
+  
+  Example usage:
+  {% include vega-chart.html 
+    chart_id="debt_histogram"
+    title="Euro Area Public Debt-to-GDP Ratios (2024 Q4)"
+    description="France has one of the highest debt-to-GDP ratios in the Euro Area. Source: EUROSTAT"
+    data_url="/assets/data/teina230_page_linear_2_0_2024_Q4.csv"
+    chart_type="bar"
+    x_field="geo"
+    y_field="OBS_VALUE"
+    x_title="Country"
+    y_title="Debt / GDP (%)"
+    highlight_field="geo"
+    highlight_value="FR"
+    highlight_color="#0b3d91"
+  %}
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+<style>
+  form.vega-bindings {
+    display: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .vega-chart-wrapper {
+    margin: 2rem 0;
+  }
+  
+  .vega-chart-wrapper h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .vega-chart-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 1rem auto;
+  }
+  
+  .vega-chart-caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+</style>
+
+<figure class="vega-chart-wrapper">
+  {% if include.title %}
+    <h3>{{ include.title }}</h3>
+  {% endif %}
+  
+  <div class="vega-chart-container" id="{{ include.chart_id | default: 'vega_chart' }}"></div>
+  
+  {% if include.description %}
+    <figcaption class="vega-chart-caption">{{ include.description }}</figcaption>
+  {% endif %}
+</figure>
+
+<script type="text/javascript">
+(function() {
+  // Chart configuration from Jekyll include parameters
+  const config = {
+    chartId: "{{ include.chart_id | default: 'vega_chart' }}",
+    dataUrl: "{{ include.data_url }}",
+    chartType: "{{ include.chart_type | default: 'bar' }}",
+    xField: "{{ include.x_field }}",
+    yField: "{{ include.y_field }}",
+    xTitle: "{{ include.x_title | default: include.x_field }}",
+    yTitle: "{{ include.y_title | default: include.y_field }}",
+    highlightField: "{{ include.highlight_field }}",
+    highlightValue: "{{ include.highlight_value }}",
+    highlightColor: "{{ include.highlight_color | default: '#0b3d91' }}",
+    defaultColor: "{{ include.default_color | default: '#1f77b4' }}",
+    width: "{{ include.width | default: 'container' }}",
+    height: {{ include.height | default: 400 }},
+    sortBy: "{{ include.sort_by | default: '-y' }}"
+  };
+  
+  // Determine mark type and encoding based on chart type
+  let markSpec = {};
+  let encodingSpec = {
+    x: {
+      field: config.xField,
+      type: "nominal",
+      title: config.xTitle,
+      sort: config.sortBy
+    },
+    y: {
+      field: config.yField,
+      type: "quantitative",
+      title: config.yTitle
+    },
+    tooltip: [
+      { field: config.xField, type: "nominal", title: config.xTitle },
+      { field: config.yField, type: "quantitative", title: config.yTitle }
+    ]
+  };
+  
+  switch(config.chartType) {
+    case 'line':
+      markSpec = { type: "line", point: true, tension: 0.3 };
+      encodingSpec.x.type = "temporal";
+      break;
+    case 'scatter':
+      markSpec = { type: "circle", size: 100 };
+      break;
+    case 'bar':
+    default:
+      markSpec = "bar";
+      break;
+  }
+  
+  // Add color encoding if highlight is specified
+  if (config.highlightField && config.highlightValue) {
+    encodingSpec.color = {
+      condition: {
+        test: `datum.${config.highlightField} === '${config.highlightValue}'`,
+        value: config.highlightColor
+      },
+      value: config.defaultColor
+    };
+  } else {
+    encodingSpec.color = { value: config.defaultColor };
+  }
+  
+  // Build the Vega-Lite specification
+  const spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": config.dataUrl,
+      "format": {
+        "type": "csv",
+        "parse": { [config.yField]: "number" }
+      }
+    },
+    "transform": [
+      { "filter": `datum.${config.yField} != null` }
+    ],
+    "mark": markSpec,
+    "encoding": encodingSpec,
+    "width": config.width === 'container' ? "container" : parseInt(config.width),
+    "height": config.height,
+    "config": {
+      "axis": {
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "titleFontWeight": "bold"
+      },
+      "view": {
+        "stroke": null
+      }
+    }
+  };
+  
+  // Render the chart
+  vegaEmbed(`#${config.chartId}`, spec, { actions: false, bind: false })
+    .catch(function(error) {
+      console.error('Error rendering Vega-Lite chart:', error);
+      document.getElementById(config.chartId).innerHTML = 
+        '<p style="color: red; text-align: center;">Error loading chart. Please check the data URL.</p>';
+    });
+})();
+</script>
+{% endraw %}
